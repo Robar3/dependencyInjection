@@ -1,0 +1,19 @@
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <label for="id">Id: </label>
+  <input id="id" type="text" formControlName="id">
+  <button type="button" (click)="generateId()">Generate Id</button>
+  <label for="name">Name: </label>
+  <input id="name" type="text" formControlName="name">
+  <label for="price">Price: </label>
+  <input id="price" type="number" formControlName="price">
+  <label for="categories">categories: </label>
+  <select id="categories"  multiple formControlName="categories">
+    <option value="Одежда">Одежда</option>
+    <option value="Обувь">Обувь</option>
+    <option value="Лекарства">Лекарства</option>
+    <option value="Еда">Еда</option>
+    <option value="Электроника">Электроника</option>
+  </select>
+  <button type="button" (click)="onSubmit()">Submit</button>
+</form>
+
